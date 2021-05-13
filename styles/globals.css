@@ -1,16 +1,28 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  /* Colours */
+  --dark-1: #121212;
+  --dark-2: #242424;
+  --dark-3: #333333;
+  --dark-4: #8a8a8a;
+  --accent-1: #14d18c;
+  --accent-2: #10a36e;
 }
 
 * {
-  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
+}
+
+body {
+  background-color: var(--dark-1);
+  margin: 0;
 }

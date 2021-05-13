@@ -1,0 +1,19 @@
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.logo:hover h1 {
+    color: white;
+}
+
+.logo h1 {
+    font-size: 22px;
+    color: var(--accent-1)
+}
+
+.logo img {
+    padding-right: 5px;
+}
