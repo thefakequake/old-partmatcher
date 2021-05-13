@@ -10,7 +10,6 @@ const Logo = () => {
         <h1>PartMatcher</h1>
       </a>
     </Link>
-
   )
 }
 
