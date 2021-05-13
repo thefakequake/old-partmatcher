@@ -1,4 +1,4 @@
-const about = ({ part }) => {
+const part = ({ part }) => {
   return (
     <div>
       <h1>{part.name}</h1>
@@ -18,4 +18,4 @@ export const getServerSideProps = async (context) => {
   }
 }
 
-export default about
+export default part
