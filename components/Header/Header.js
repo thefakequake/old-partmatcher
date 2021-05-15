@@ -29,7 +29,6 @@ const Header = ({
       <meta property="og:type" content="website" />
 
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title ? `PartMatcher ${title}` : "PartMatcher"} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image ? image : "/images/logo128.png"} />
