@@ -30,8 +30,6 @@ const Header = ({
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta property="twitter:domain" content={window.location.host} />
-      <meta property="twitter:url" content={window.location.href} />
       <meta name="twitter:title" content={title ? `PartMatcher ${title}` : "PartMatcher"} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image ? image : "/images/logo128.png"} />
