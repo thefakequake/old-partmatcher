@@ -4,7 +4,8 @@ const Header = ({
   title = false,
   image = false,
   url = false,
-  keywords = []
+  keywords = [],
+  description = "PC parts. Simplified."
 }) => {
   return (
     <Head>
@@ -18,6 +19,7 @@ const Header = ({
         property="og:image"
         content={image ? image : "/images/logo128.png"}
       />
+      <meta />
       {url && <meta property="og:url" content={url} />}
       <meta property="theme-color" content="#14d18c" />
       <meta
@@ -27,12 +29,12 @@ const Header = ({
           (keywords ? ", " + keywords.join(", ") : "")
         }
       />
-      <meta name="rating" content="safe for kids" />
-      <meta name="target" content="all" />
-      <meta name="audience" content="all" />
-      <meta name="coverage" content="Worldwide" />
-      <meta name="distribution" content="Global" />
-      <meta name="description" content="PC parts. Simplified." />
+      <meta property="rating" content="safe for kids" />
+      <meta property="target" content="all" />
+      <meta property="audience" content="all" />
+      <meta property="coverage" content="Worldwide" />
+      <meta property="distribution" content="Global" />
+      <meta property="description" content="PC parts. Simplified." />
     </Head>
   )
 }
