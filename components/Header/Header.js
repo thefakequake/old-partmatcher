@@ -32,6 +32,7 @@ const Header = ({
       <meta name="audience" content="all" />
       <meta name="coverage" content="Worldwide" />
       <meta name="distribution" content="Global" />
+      <meta name="description" content="PC parts. Simplified." />
     </Head>
   )
 }
