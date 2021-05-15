@@ -20,7 +20,7 @@ const socials = [
   },
   {
     name: "PartMatcher GitHub",
-    url: "https://github.com/PartMatcher",
+    url: "https://github.com/partmatcher/partmatcher",
     component: <FaGithub size={iconSize} />,
   },
 ]
