@@ -1,0 +1,45 @@
+.errorBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 3rem;
+}
+
+.error {
+  font-size: 5rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--accent-1);
+}
+
+.errorText {
+  font-size: 1.5rem;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: var(--accent-1);
+}
+
+@media screen and (max-width: 1250px) {
+  .errorBox {
+    line-height: 2rem;
+  }
+
+  .error {
+    font-size: 2.75rem;
+  }
+
+  .errorText {
+    font-size: 1rem;
+  }
+}
+
