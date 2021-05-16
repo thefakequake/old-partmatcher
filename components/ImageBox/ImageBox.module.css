@@ -1,0 +1,6 @@
+.imgBox {
+  background-color: white;
+  display: inline-block;
+  border: 5px white solid;
+  border-radius: 1rem;
+}
