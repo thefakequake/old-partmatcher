@@ -1,6 +1,6 @@
 .navbar {
   height: 80px;
-  background-color: var(--dark-2);
+  background-color: var(--dark-3);
   display: flex;
   align-items: center;
   justify-content: left;
@@ -19,7 +19,7 @@
 
 .navLink a {
   text-decoration: none;
-  color: var(--dark-4);
+  color: var(--dark-5);
 }
 
 .navLink a:hover {
@@ -60,7 +60,7 @@
   }
 
   .navLinks.active {
-    background: var(--dark-2);
+    background: var(--dark-3);
     left: 0;
     opacity: 0.9;
     transition: all 0.5s ease;
@@ -77,7 +77,7 @@
   }
 
   .navLink:hover {
-    background-color: var(--dark-3);
+    background-color: var(--dark-4);
     border-radius: 0;
   }
 
