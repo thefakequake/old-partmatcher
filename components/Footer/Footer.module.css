@@ -1,9 +1,8 @@
 .footerBar {
-  background-color: var(--dark-2);
-  position: fixed;
-  bottom: 0;
+  flex-basis: 100px;
+  background-color: var(--dark-3);
   width: 100%;
-  height: 110px;
+  height: 7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
