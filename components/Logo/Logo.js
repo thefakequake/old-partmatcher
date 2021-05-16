@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <Link href="/">
       <a className={styles.logo}>
-        <img src="/images/logo64.png" width="64px" height="64px" />
+        <img src="/images/logo64.png" width="64px" height="64px" alt="PartMatcher logo" />
         <h1>PartMatcher</h1>
       </a>
     </Link>
