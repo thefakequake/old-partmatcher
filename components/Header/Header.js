@@ -9,7 +9,7 @@ const Header = ({
 }) => {
   return (
     <Head>
-      <title>{title ? `PartMatcher ${title}` : "PartMatcher"}</title>
+      <title>{title ? `PartMatcher - ${title}` : "PartMatcher"}</title>
 
       {/* Standard HTML Tags */}
       <meta name="theme-color" content="#14d18c" />
