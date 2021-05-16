@@ -1,0 +1,100 @@
+.partName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 7rem;
+  background: var(--dark-2);
+}
+
+.partName > * {
+  margin: 0;
+}
+
+.upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.upper a {
+  text-decoration: none;
+}
+
+.upper a:hover {
+  color: white;
+}
+
+.upper > * {
+  margin: 0;
+}
+
+.seperator {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.partName a {
+  color: var(--accent-1);
+}
+
+.partId {
+  color: var(--accent-2);
+}
+
+.notes {
+  display: block;
+  background-color: var(--dark-2);
+  border-radius: 1rem;
+  width: 58%;
+}
+
+.notes ul li {
+  color: var(--accent-1);
+}
+
+.notes ul li span {
+  color: white;
+}
+
+.notes li {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: flex;
+  margin: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.content > * {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.specs {
+  display: block;
+  position: relative;
+  right: 0;
+  background-color: var(--dark-2);
+  border: 10px var(--dark- 2) solid;
+  border-radius: 1rem;
+  width: 20%;
+}
+
+.specs > * {
+  margin-left: 1rem;
+}
+
+.specs h2 {
+  color: var(--accent-1);
+  margin-bottom: 0.5rem;
+}
+
+.specs h4 {
+  margin-top: 0;
+}
