@@ -8,6 +8,11 @@ import Header from "../../../components/Header/Header"
 const part = ({ part }) => {
   if (!part) return <Custom404 />
 
+  const copyLinkToClipboard  = () => {
+    navigator.clipboard.writeText(window.location.href)
+    alert("Copied Part URL to clipboard")    
+  }
+
   return (
     <>
       <Header
@@ -22,7 +27,7 @@ const part = ({ part }) => {
             </a>
           </Link>
           <p className={styles.seperator}>•</p>
-          <p className={styles.partId}>{part.part_id}</p>
+          <p onClick={copyLinkToClipboard} className={styles.partId}>{part.part_id}</p>
         </div>
         <h1>
           {part.manufacturer} {part.name}

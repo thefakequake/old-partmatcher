@@ -46,6 +46,11 @@
 
 .partId {
   color: var(--accent-2);
+  cursor: pointer;
+}
+
+.partId:hover {
+  color: white;
 }
 
 .notes {
@@ -105,6 +110,10 @@
 }
 
 @media screen and (max-width: 960px) {
+  .specs h2 {
+    font-size: 1.25rem;
+  }
+
   .content {
     flex-direction: column;
     align-items: center;
@@ -115,13 +124,13 @@
   }
 
   .notes {
-    width: 100%
+    width: 100%;
   }
 
   .specs {
     all: unset;
     background-color: var(--dark-2);
-    border: 10px var(--dark- 2) solid;  
+    border: 10px var(--dark- 2) solid;
     width: 100%;
     border-radius: 1rem;
   }
