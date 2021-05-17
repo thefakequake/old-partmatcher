@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <h1>This is the home page</h1>
+      <h1>Welcome to PartMatcher!</h1>
     </div>
   )
 }
