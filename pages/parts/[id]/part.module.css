@@ -99,3 +99,30 @@
 .specs h4 {
   margin-top: 0;
 }
+
+@media screen and (max-width: 960px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content > * {
+    margin-bottom: 3rem;
+  }
+
+  .notes {
+    width: 100%
+  }
+
+  .specs {
+    all: unset;
+    background-color: var(--dark-2);
+    border: 10px var(--dark- 2) solid;  
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  .notes li {
+    padding-right: 1rem;
+  }
+}
