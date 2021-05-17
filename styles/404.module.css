@@ -10,36 +10,21 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  line-height: 3rem;
+  line-height: clamp(1rem, 2.5vw, 3rem)
 }
 
 .error {
-  font-size: 5rem;
+  font-size: clamp(2.3rem, 5vw, 10rem);
   font-weight: 600;
   margin: 0;
   color: var(--accent-1);
 }
 
 .errorText {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 .homeLink {
   text-decoration: none;
   color: var(--accent-1);
 }
-
-@media screen and (max-width: 1250px) {
-  .errorBox {
-    line-height: 2rem;
-  }
-
-  .error {
-    font-size: 2.75rem;
-  }
-
-  .errorText {
-    font-size: 1rem;
-  }
-}
-

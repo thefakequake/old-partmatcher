@@ -49,6 +49,7 @@
   background-color: var(--dark-2);
   border-radius: 1rem;
   width: 58%;
+  min-height: 310px;
 }
 
 .notes ul li {
