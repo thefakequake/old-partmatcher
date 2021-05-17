@@ -10,9 +10,9 @@ const part = ({ part }) => {
 
   return (
     <>
-      <Header 
-        title = {`${part.manufacturer} ${part.name}`}
-        image = {part.images ? part.images[0] : "/images/noimage.png"}
+      <Header
+        title={`${part.manufacturer} ${part.name}`}
+        image={part.images ? part.images[0] : "/images/noimage.png"}
       />
       <div className={styles.partName}>
         <div className={styles.upper}>
@@ -41,11 +41,12 @@ const part = ({ part }) => {
         <div className={styles.notes}>
           <h1 align="center">Notes</h1>
           <ul>
-            {part.notes.map((note, index) => 
-              <li className={styles.note} key={index}><span>{note}</span></li>
-            )}
+            {part.notes.map((note, index) => (
+              <li className={styles.note} key={index}>
+                <span>{note}</span>
+              </li>
+            ))}
           </ul>
-
         </div>
         <div className={styles.specs}>
           <h1 align="center">Specs</h1>
