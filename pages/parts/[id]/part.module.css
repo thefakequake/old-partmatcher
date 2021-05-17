@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+.partName h1 {
+  font-size: clamp(2rem, 2.5vw, 2.25rem);
+}
+
 .upper {
   display: flex;
   flex-direction: row;
