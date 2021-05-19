@@ -5,9 +5,9 @@
   </p>
 </a>
 
-<br>
-<br>
+---
 ### https://partmatcher-beta.vercel.app/
+
 ### The open source PCPartPicker alternative, written with Next.js, React and MongoDB. The project is currently hosted on [Vercel](https://vercel.com).
 
 <a href="https://discord.com/invite/Qx5y8AvTeu">![](https://shields.io/discord/809900131494789120)</a> <a href="https://www.youtube.com/channel/UC7VVQ0BF4gOLUaeHgs-ixhQ">![](https://shields.io/youtube/channel/subscribers/UC7VVQ0BF4gOLUaeHgs-ixhQ)</a> <a href="https://twitter.com/PartMatcher">![](https://shields.io/twitter/follow/PartMatcher)</a>
