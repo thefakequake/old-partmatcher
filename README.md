@@ -1,4 +1,11 @@
-<img src="/public/images/logo128.png" style="float: left;"><h1>PartMatcher</h1>
+<a href="https://partmatcher-beta.vercel.app/">
+  <p align="center">
+    <img src="/public/images/logo128.png" />
+    <h1 align="center">PartMatcher</h1>
+  </p>
+</a>
+
+<br>
 <br>
 ### https://partmatcher-beta.vercel.app/
 ### The open source PCPartPicker alternative, written with Next.js, React and MongoDB. The project is currently hosted on [Vercel](https://vercel.com).
@@ -12,7 +19,7 @@
 - Public API
 
 ## Current Features:
-- A page for viewing parts. [Here is an example](http://127.0.0.1:3000/parts/Qhi3Rq)
+- A page for viewing parts. [Here is an example](https://partmatcher-beta.vercel.app/parts/Qhi3Rq)
 - Some API routes
 
 ## WIP/Upcoming:
