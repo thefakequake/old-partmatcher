@@ -3,7 +3,11 @@
   background-color: var(--dark-3);
   display: flex;
   align-items: center;
-  justify-content: left;
+  z-index: 10;
+}
+
+.navbar > * {
+  z-index: 10;
 }
 
 .navLinks {
@@ -52,28 +56,27 @@
     width: 100%;
     height: 300px;
     position: absolute;
-    top: 80px;
-    left: -100%;
+    top: -100%;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 0;
   }
 
   .navLinks.active {
+    top: 80px;
     background: var(--dark-3);
     left: 0;
-    opacity: 0.9;
+    opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 0;
   }
   
   .navLink {
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    width: 90%;
+    padding: 25px 0px;
+    width: 100%;
   }
 
   .navLink:hover {
