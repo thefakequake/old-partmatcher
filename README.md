@@ -38,8 +38,13 @@
 
 ### The TL;DR on the code style is:
 - No semicolons (sorry)
+- Double quotes (") for multi character strings, single quotes (') for single character strings
 - Indent size of 2
 - camelCase variable naming
 - PascalCase component naming
 - No trailing commas
 - Use [next/link/Link](https://nextjs.org/docs/api-reference/next/link) instead of standard "<\a>" tags
+
+# Credits
+- Bogdan for the website logo and icons
+- The [Reactiflux Community](https://discord.gg/ES9ArBBFSU) for their help on specific issues
