@@ -48,3 +48,17 @@ a:hover {
 #pageContent {
   flex-grow: 1;
 }
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb { 
+  height: 50px;
+  background-color: var(--accent-2);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover { 
+  background-color: var(--accent-1);
+}
