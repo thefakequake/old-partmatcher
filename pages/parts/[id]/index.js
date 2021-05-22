@@ -4,13 +4,14 @@ import styles from "./part.module.css"
 import Link from "next/link"
 import ImageBox from "../../../components/ImageBox/ImageBox"
 import Header from "../../../components/Header/Header"
+import Image from "next/image"
 
 const part = ({ part }) => {
   if (!part) return <Custom404 />
 
-  const copyLinkToClipboard  = () => {
+  const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
-    alert("Copied Part URL to clipboard")    
+    alert("Copied Part URL to clipboard")
   }
 
   return (
@@ -27,7 +28,9 @@ const part = ({ part }) => {
             </a>
           </Link>
           <p className={styles.seperator}>•</p>
-          <p onClick={copyLinkToClipboard} className={styles.partId}>{part.part_id}</p>
+          <p onClick={copyLinkToClipboard} className={styles.partId}>
+            {part.part_id}
+          </p>
         </div>
         <h1>
           {part.manufacturer} {part.name}
@@ -35,7 +38,7 @@ const part = ({ part }) => {
       </div>
       <div className={styles.content}>
         <ImageBox>
-          <img
+          <Image
             src={part.images[0]}
             className={styles.partImg}
             width="300px"
@@ -55,10 +58,10 @@ const part = ({ part }) => {
         </div>
         <div className={styles.specs}>
           <h1 align="center">Specs</h1>
-          {Object.keys(part.specs).map((specName) => (
-            <div>
+          {Object.keys(part.specs).map((specName, count) => (
+            <div key={count}>
               <h2>{specName}</h2>
-              <h4>{part.specs[specName]}</h4>
+              <h3>{part.specs[specName]}</h3>
             </div>
           ))}
         </div>
