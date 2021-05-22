@@ -109,8 +109,9 @@
   margin-bottom: 0.5rem;
 }
 
-.specs h4 {
+.specs h3 {
   margin-top: 0;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 960px) {
