@@ -46,6 +46,13 @@ const privacy = () => {
             All PartMatcher data is stored safely with{" "}
             <a href="https://www.mongodb.com/">MongoDB</a>.
           </p>
+          <h2>How cookies are used:</h2>
+          <ul>
+            <li>Persisting your settings/preferences</li>
+            <li>Keeping you logged in</li>
+          </ul>
+          <h2>Contact</h2>
+          <p>If you have any questions, join the <a href="https://discord.gg/Qx5y8AvTeu">PartMatcher Discord</a> and contact QuaKe.</p>
         </div>
       </div>
     </>
