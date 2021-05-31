@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header"
 import PartChoice from "../../components/PartChoice/PartChoice"
 import styles from "./partsPage.module.css"
-import parts from "./parts"
+import parts from "../../utils/parts"
 
 const partsPage = () => {
   return (

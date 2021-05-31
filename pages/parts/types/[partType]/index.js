@@ -9,7 +9,7 @@ import { useState, useCallback } from "react"
 import debounce from "lodash/debounce"
 
 import { connectToDatabase } from "../../../../utils/mongodb"
-import parts from "../../parts"
+import parts from "../../../../utils/parts"
 
 import styles from "./partTypePage.module.css"
 
