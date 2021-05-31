@@ -1,0 +1,140 @@
+.partTypePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.partTypePage > * {
+  z-index: 1;
+}
+
+.partInput {
+  width: clamp(20rem, 50vw, 40rem);
+  height: 3rem;
+  border-radius: 1rem;
+  font-size: clamp(0.5rem, 10vw, 2rem)
+}
+
+.partInput:focus {
+  outline: none;
+}
+
+.partInput[type="text"] {
+  padding-left: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.searchResults {
+  background-color: var(--dark-3);
+  border: 5px var(--dark-3) solid;
+  width: clamp(21.5rem, 50vw, 41rem);
+  height: 15rem;
+  margin-bottom: -15.925rem;
+  display: none;
+  overflow-x: hidden;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+  border-radius: 1rem;
+}
+
+.searchResults > * {
+  z-index: 3;
+}
+
+.focused {
+  display: flex;
+}
+
+.closeIcon {
+  color: var(--accent-1);
+  font-size: 2rem;
+  cursor: pointer;
+  margin-top: -2.7rem;
+  margin-left: calc(clamp(20rem, 50vw, 40rem) - 2rem);
+  z-index: 2;
+  margin-bottom: 1rem;
+}
+
+.featuredLink {
+  text-decoration: none;
+}
+
+.featuredText {
+  margin: 1rem 0 1rem 0;
+}
+
+.featuredBox {
+  margin: 2rem 0 0 0;
+  background-color: var(--dark-2);
+  border-radius: 1rem;
+  width: 70vw;
+}
+
+.featuredParts {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.featuredPart {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+.featuredPart h2 {
+  margin: 0.5rem 0 0 0;
+  color: var(--accent-1);
+  font-size: 1.3rem;
+}
+
+.noFeatured {
+  align-items: center;
+  justify-content: center;
+}
+
+.noFeatured h3 {
+  color: var(--accent-1)
+}
+
+@media screen and (max-width: 960px) {
+  .featuredBox {
+    margin-bottom: 2rem;
+    width: 90vw;
+  }
+
+  .featuredParts {
+    flex-direction: column;
+  }
+
+  .featuredPart {
+    margin-top: 2rem;
+  }
+
+  .featuredPart img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .featuredPart h2 {
+    margin-top: 0.25rem;
+    font-size: 1.75rem;
+  }
+
+  .partName {
+    font-size: clamp(1rem, 6.5vw, 2rem);
+  }
+
+  .partInput[type="text"] {
+    font-size: 1rem;
+  }
+}
