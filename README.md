@@ -17,14 +17,15 @@
 - Fully open source
 - Material theme
 - Public API
+- More emphasis on the social aspect
 
 ## Current Features:
-- A page for viewing parts. [Here is an example](https://partmatcher-beta.vercel.app/parts/Qhi3Rq)
+- 12 different PC part types
 - Some API routes
+- Auth and accounts with 4 different social login methods
 
 ## WIP/Upcoming:
 - Part lists
-- Login and auth
 - Part reviews
 
 ## Long term:
