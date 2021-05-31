@@ -5,7 +5,8 @@ import {
   FaUserShield,
   FaUserCheck,
   FaUserEdit,
-  FaUserPlus
+  FaUserPlus,
+  FaCode
 } from "react-icons/fa"
 import ReactTooltip from "react-tooltip"
 
@@ -32,6 +33,12 @@ const index = ({ user, partLists = [] }) => {
               <h1>{user.name}</h1>
               <div className={styles.badges}>
                 {user.roles.includes("developer") && (
+                  <FaCode data-tip="Developer" className={styles.badge} />
+                )}
+                {user.roles.includes("moderator") && (
+                  <FaUserShield data-tip="Moderator" className={styles.badge} />
+                )}
+                {user.roles.includes("og") && (
                   <img
                     src="/images/logo.svg"
                     data-tip="Developer"
@@ -39,9 +46,6 @@ const index = ({ user, partLists = [] }) => {
                     height="30px"
                     width="30px"
                   />
-                )}
-                {user.roles.includes("moderator") && (
-                  <FaUserShield data-tip="Moderator" className={styles.badge} />
                 )}
                 {user.roles.includes("verified") && (
                   <FaUserCheck data-tip="Verified" className={styles.badge} />
