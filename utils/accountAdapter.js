@@ -136,6 +136,7 @@ export const accountAdapter = async () => {
           return session
         },
         async updateSession(session, force) {
+          delete session._id
           if (
             !force &&
             Number(session.expires) - sessionMaxAge + sessionUpdateAge >
@@ -147,7 +148,7 @@ export const accountAdapter = async () => {
           const expires = new Date(Date.now() + sessionMaxAge)
           await db
             .collection("Sessions")
-            .updateOne({ id: session.id }, { $set: { ...session, expires } })
+            .replcaeOne({ id: session.id }, { ...session, expires })
 
           return {
             ...session,
