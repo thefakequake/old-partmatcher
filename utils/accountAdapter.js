@@ -67,10 +67,12 @@ export const accountAdapter = async () => {
           return { ...user, id: user.id }
         },
         async updateUser(user) {
+          delete user._id
           const updatedUser = { ...user, updatedAt: new Date(Date.now()) }
+
           await db
             .collection("Users")
-            .updateOne({ id: user.id }, { $set: updatedUser })
+            .replaceOne({ id: user.id }, updatedUser)
 
           return updatedUser
         },
