@@ -33,11 +33,6 @@ const Navbar = () => {
             </Link>
           </div>
         ))}
-        {!session && (
-          <div className={styles.navLink + " " + styles.push}>
-            <a onClick={signIn}>Log in</a>
-          </div>
-        )}
       </nav>
       <NavbarDropdown session={session} className={styles.userToggle} />
     </div>
