@@ -105,10 +105,13 @@
     width: 100%;
     padding: 0;
     height: 5rem;
+    -webkit-tap-highlight-color: transparent;
   }
 
-  .navLink:hover {
-    background-color: var(--dark-4);
+  .navLink a {
+    padding-top: 3.5rem;
+    width: 100%;
+    height: 100%;
   }
 
   .userToggle {
