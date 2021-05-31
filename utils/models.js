@@ -2,7 +2,7 @@ const models = {
   user: {
     partLists: [],
     contributions: 0,
-    roles: []
+    roles: ["og"]
   },
   partList: {
     author: "",
