@@ -6,7 +6,7 @@ const Logo = ({ className }) => {
   return (
     <Link href="/">
       <a className={styles.logo + ' ' + className}>
-        <Image src="/images/logo.svg" width="58px" height="58px" alt="PartMatcher logo" />
+        <Image src="/images/logo.svg" width="58px" height="58px" alt="PartMatcher logo" priority={true} />
         <h1>PartMatcher</h1>
       </a>
     </Link>
