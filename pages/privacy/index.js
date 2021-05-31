@@ -17,6 +17,7 @@ const privacy = () => {
             <li>Part lists and builds</li>
             <li>Contributions</li>
             <li>Your site preferences and settings</li>
+            <li>Performance analytics</li>
           </ul>
           <h2>How it's collected:</h2>
           <p>
@@ -27,13 +28,17 @@ const privacy = () => {
             When you log in on PartMatcher, a session is created that is used to
             hold user state. We also store your contributions so that we can
             keep logs of what gets edited and when. When you create a part list
-            or build, the data to construct them are stored.
+            or build, the data to construct them are stored. Performance
+            analytics are collected with{" "}
+            <a href="https://vercel.com/analytics">Vercel Analytics</a>.
           </p>
           <h2>Why it's collected:</h2>
           <p>
             Settings/preferences are saved to sync settings between accounts, so
             you can save your configurations. Sessions are a required part of
             the auth system. Contributions are logged to make rollbacks easier.
+            Performance analytics are used to improve performance on the site,
+            and they aren't related to user data.
           </p>
           <h2>How it's used:</h2>
           <p>
@@ -52,7 +57,11 @@ const privacy = () => {
             <li>Keeping you logged in</li>
           </ul>
           <h2>Contact</h2>
-          <p>If you have any questions, join the <a href="https://discord.gg/Qx5y8AvTeu">PartMatcher Discord</a> and contact QuaKe.</p>
+          <p>
+            If you have any questions, join the{" "}
+            <a href="https://discord.gg/Qx5y8AvTeu">PartMatcher Discord</a> and
+            contact QuaKe.
+          </p>
         </div>
       </div>
     </>
