@@ -4,22 +4,22 @@ const iconSize = "40px"
 
 const socials = [
   {
-    name: "PartMatcher Discord Server",
+    name: "Discord Server",
     url: "https://discord.gg/Qx5y8AvTeu",
     component: <FaDiscord size={iconSize} />,
   },
   {
-    name: "PartMatcher Twitter",
+    name: "Twitter",
     url: "https://twitter.com/PartMatcher",
     component: <FaTwitter size={iconSize} />,
   },
   {
-    name: "PartMatcher YouTube Channel",
+    name: "YouTube Channel",
     url: "https://www.youtube.com/channel/UC7VVQ0BF4gOLUaeHgs-ixhQ",
     component: <FaYoutube size={iconSize} />,
   },
   {
-    name: "PartMatcher GitHub",
+    name: "GitHub",
     url: "https://github.com/QuaKe8782/partmatcher",
     component: <FaGithub size={iconSize} />,
   },
