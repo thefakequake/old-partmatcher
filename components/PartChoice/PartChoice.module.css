@@ -1,0 +1,24 @@
+.part {
+  background-color: var(--dark-2);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.part:hover {
+  background-color: var(--dark-3);
+}
+
+.part a {
+  text-decoration: none;
+}
+
+.part h2 {
+  font-size: 1.3rem;
+}
