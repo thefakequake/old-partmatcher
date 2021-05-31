@@ -41,7 +41,7 @@ const index = ({ user, partLists = [] }) => {
                 {user.roles.includes("og") && (
                   <img
                     src="/images/logo.svg"
-                    data-tip="Developer"
+                    data-tip="OG"
                     className={styles.badge}
                     height="30px"
                     width="30px"
