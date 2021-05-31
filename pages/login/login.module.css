@@ -1,0 +1,70 @@
+.logInBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  background-color: var(--dark-2);
+  border-radius: 1rem;
+  height: 32rem;
+  width: 30rem;
+}
+
+.logins {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logins button {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-3);
+  color: var(--accent-1);
+  font-size: 1rem;
+  height: 4rem;
+  width: 18rem;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 800;
+}
+
+.logins button:hover, .logins button:hover > * {
+  color: white;
+}
+
+.logins button:focus {
+  background-color: var(--dark-4);
+}
+
+.socialIcon {
+  margin-right: 1rem;
+  font-size: 2.5rem;
+  color: var(--accent-1);
+}
+
+@media screen and (max-width: 960px) {
+  .logInBox {
+    all: unset;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .logins {
+    margin-top: 0;
+  }
+
+  .logins button {
+    margin-bottom: 1.5rem;
+    width: 18rem;
+  }
+
+  .socialIcon {
+    font-size: 2rem;
+  }
+}
