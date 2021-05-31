@@ -1,11 +1,9 @@
 import styles from "./Footer.module.css"
 import socials from "./Socials"
-import ReactTooltip from 'react-tooltip'
 
 const Footer = () => {
   return (
     <>
-    <ReactTooltip backgroundColor="#121212" />
       <footer className={styles.footerBar}>
         <div>
           {socials.map((platform, count) => (
