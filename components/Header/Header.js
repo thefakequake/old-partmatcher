@@ -23,7 +23,8 @@ const Header = ({
 
       {/* Open Graph */}
       {url && <meta property="og:url" content={url} />}
-      <meta property="og:title" content={title ? `PartMatcher - ${title}` : "PartMatcher"} />
+      <meta property="og:site_name" content="PartMatcher" />
+      <meta property="og:title" content={title ? title : "PartMatcher"} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image ? image : "/images/logo128.png"} />
       <meta property="og:type" content="website" />
@@ -32,7 +33,6 @@ const Header = ({
       <meta name="twitter:title" content={title ? `PartMatcher - ${title}` : "PartMatcher"} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image ? image : "/images/logo128.png"} />
-
     </Head>
   )
 }
