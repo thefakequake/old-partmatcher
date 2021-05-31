@@ -8,7 +8,7 @@ import Image from "next/image"
 const part = ({ part }) => {
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
-    alert("Copied Part URL to clipboard")
+    alert("Copied part URL to clipboard")
   }
 
   return (
@@ -25,7 +25,7 @@ const part = ({ part }) => {
             </a>
           </Link>
           <p className={styles.seperator}>•</p>
-          <p onClick={copyLinkToClipboard} className={styles.partId}>
+          <p onClick={copyLinkToClipboard} data-tip="Copy to clipboard" className={styles.partId}>
             {part.part_id}
           </p>
         </div>
