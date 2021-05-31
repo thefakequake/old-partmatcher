@@ -1,0 +1,17 @@
+.searchResult {
+  border-radius: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.searchResult a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.partName {
+  margin-left: 1rem;
+}
