@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   z-index: 10;
+  width: 100%;
 }
 
 .navbar > * {
@@ -12,26 +13,23 @@
 
 .navLinks {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
 }
 
 .navLink {
   padding-left: 1.5rem;
   display: inline;
+  cursor: pointer;
 }
 
 .navLink a {
   text-decoration: none;
   color: var(--dark-5);
+  z-index: 9;
+  transition: color 0.2s;
 }
 
 .navLink a:hover {
   color: white;
-}
-
-.push {
-  margin-left: auto;
 }
 
 .toggle {
@@ -39,21 +37,50 @@
   display: none;
 }
 
+.userBox {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.userBox img {
+  border-radius: 100%;
+}
+
+.userBox h3 {
+  margin-left: 0.5rem;
+}
+
 @media screen and (max-width: 960px) {
+  .navbar {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo > h1 {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 2rem !important;
+    padding: 0;
+  }
+
+  .logo > div > * {
+    padding: 0 !important;
+  }
+
   .toggle {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 100%);
+    display: inline;
     font-size: 1.4rem;
     cursor: pointer;
+    margin-left: 1rem;
   }
 
   .navLinks {
     display: table;
     width: 100%;
-    height: 300px;
     position: absolute;
     top: -100%;
     opacity: 1;
@@ -73,13 +100,18 @@
   .navLink {
     text-align: center;
     display: flex;
-    flex-direction: column;
-    padding: 25px 0px;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    padding: 0;
+    height: 5rem;
   }
 
   .navLink:hover {
     background-color: var(--dark-4);
-    border-radius: 0;
+  }
+
+  .userToggle {
+    margin-left: 0 !important;
   }
 }
