@@ -19,7 +19,7 @@ const index = ({ user, partLists = [] }) => {
   return (
     <>
       <ReactTooltip backgroundColor="#121212" />
-      <Header title={user.name} />
+      <Header title={user.name} image={user.image} />
       <div className={styles.container}>
         <div className={styles.userSummary}>
           <div className={styles.userInfo}>
@@ -38,6 +38,12 @@ const index = ({ user, partLists = [] }) => {
                 {user.roles.includes("moderator") && (
                   <FaUserShield data-tip="Moderator" className={styles.badge} />
                 )}
+                {user.roles.includes("verified") && (
+                  <FaUserCheck data-tip="Verified" className={styles.badge} />
+                )}
+                {user.contributions > 0 && (
+                  <FaUserEdit data-tip="Contributor" className={styles.badge} />
+                )}
                 {user.roles.includes("og") && (
                   <img
                     src="/images/logo.svg"
@@ -46,12 +52,6 @@ const index = ({ user, partLists = [] }) => {
                     height="30px"
                     width="30px"
                   />
-                )}
-                {user.roles.includes("verified") && (
-                  <FaUserCheck data-tip="Verified" className={styles.badge} />
-                )}
-                {user.contributions > 0 && (
-                  <FaUserEdit data-tip="Contributor" className={styles.badge} />
                 )}
                 {user.createdAt > new Date(Date.now() - 604800000) && (
                   <FaUserPlus data-tip="New user" className={styles.badge} />
