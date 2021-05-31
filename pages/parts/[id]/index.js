@@ -1,5 +1,4 @@
 import { connectToDatabase } from "../../../utils/mongodb"
-import Custom404 from "../../404"
 import styles from "./part.module.css"
 import Link from "next/link"
 import ImageBox from "../../../components/ImageBox/ImageBox"
@@ -7,8 +6,6 @@ import Header from "../../../components/Header/Header"
 import Image from "next/image"
 
 const part = ({ part }) => {
-  if (!part) return <Custom404 />
-
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
     alert("Copied Part URL to clipboard")
@@ -22,7 +19,7 @@ const part = ({ part }) => {
       />
       <div className={styles.partName}>
         <div className={styles.upper}>
-          <Link href={`/parts/${part.type.toLowerCase().replace(" ", "-")}`}>
+          <Link href={`/parts/type/${part.type.toLowerCase().replace(" ", "-")}`}>
             <a>
               <strong>{part.type.toUpperCase()}</strong>
             </a>
@@ -76,6 +73,13 @@ export const getServerSideProps = async (context) => {
   const part = await db
     .collection("Parts")
     .findOne({ part_id: context.params.id }, { projection: { _id: 0 } })
+
+  if (!part) {
+    context.res.statusCode = 302
+    context.res.setHeader("location", "/404")
+    context.res.end()
+    return {props: {}}
+  }
 
   return {
     props: {
