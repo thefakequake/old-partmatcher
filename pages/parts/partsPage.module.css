@@ -1,0 +1,54 @@
+.titleText {
+  margin-top: 3rem;
+  font-size: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.partTypes {
+  display: grid;
+  grid-template-columns: repeat(4, calc(250px + 2rem));
+  grid-template-rows: repeat(3, calc(250px + 2rem));
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .titleText {
+    font-size: 2.25rem;
+  }
+
+  .partTypes {
+    display: grid;
+    grid-template-columns: repeat(2, calc(150px + 1rem));
+    grid-template-rows: repeat(6, calc(150px + 1rem));
+    margin-bottom: 2rem;
+    margin-left: 0.75rem;
+  }
+
+  .partType {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+  }
+
+  .partType h2 {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+  }
+
+  .partType img {
+    width: 100px;
+    height: 100px;
+  }
+
+}
