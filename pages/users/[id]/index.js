@@ -8,7 +8,6 @@ import {
   FaUserPlus,
   FaCode
 } from "react-icons/fa"
-import ReactTooltip from "react-tooltip"
 
 const index = ({ user, partLists = [] }) => {
   const copyLinkToClipboard = () => {
@@ -18,7 +17,6 @@ const index = ({ user, partLists = [] }) => {
 
   return (
     <>
-      <ReactTooltip backgroundColor="#121212" />
       <Header title={user.name} image={user.image} />
       <div className={styles.container}>
         <div className={styles.userSummary}>
