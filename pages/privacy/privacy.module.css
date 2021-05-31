@@ -27,3 +27,9 @@
 .privacyBody a:hover {
   color: white;
 }
+
+@media screen and (max-width: 960px) {
+  .privacyBody {
+    width: 90vw;
+  }
+}
