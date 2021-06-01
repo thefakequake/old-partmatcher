@@ -148,7 +148,7 @@ export const accountAdapter = async () => {
           const expires = new Date(Date.now() + sessionMaxAge)
           await db
             .collection("Sessions")
-            .replcaeOne({ id: session.id }, { ...session, expires })
+            .replaceOne({ id: session.id }, { ...session, expires })
 
           return {
             ...session,
