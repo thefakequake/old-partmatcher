@@ -17,7 +17,7 @@ export const accountAdapter = async () => {
   const genUserId = async (obj) => {
     var id
     while (true) {
-      id = randomBytes(3).toString("hex")
+      id = Math.random().toString(36).slice(6).substr(0, 6)
       if (!(await db.collection("Users").findOne({ id }))) {
         break
       }
