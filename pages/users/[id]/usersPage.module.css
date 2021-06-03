@@ -36,7 +36,7 @@
 .partLists {
   margin-left: 2rem;
   height: 95%;
-  width: 100vw;
+  width: 60vw;
   background-color: var(--dark-2);
   border-radius: 1rem;
   margin-right: 2rem;
@@ -55,7 +55,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25rem;
+  width: 18rem;
 }
 
 .userName {
