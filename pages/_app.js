@@ -21,15 +21,9 @@ Router.onRouteChangeError = () => {
 }
 
 function MyApp({ Component, pageProps }) {
-  const [session, loading] = useSession()
   const [tooltipVisible, setTooltipVisibility] = useState(false)
   const router = useRouter()
   const [tooltipKey, setTooltipKey] = useState(0)
-
-  const isUser = !!session?.user
-  useEffect(() => {
-    if (loading) return
-  }, [isUser, loading])
 
   useEffect(() => {
     setTooltipVisibility(true)
