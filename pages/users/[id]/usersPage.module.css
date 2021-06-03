@@ -114,7 +114,7 @@
   color: var(--accent-1);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
   .container {
     all: unset;
     display: flex;
@@ -124,6 +124,7 @@
     justify-content: flex-start;
     margin-top: 1rem;
     width: 100vw;
+    margin-bottom: 1rem;
   }
 
   .userSummary {
