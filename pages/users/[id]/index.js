@@ -18,75 +18,83 @@ const index = ({ user, partLists = [] }) => {
   return (
     <>
       <Header title={user.name} image={user.image} />
-      <div className={styles.container}>
-        <div className={styles.userSummary}>
-          <div className={styles.userInfo}>
-            <img
-              src={user.image}
-              className={styles.userImage}
-              width="230px"
-              height="230px"
-            />
-            <div className={styles.userName} align="center">
-              <h1>{user.name}</h1>
-              <div className={styles.badges}>
-                {user.roles.includes("developer") && (
-                  <FaCode data-tip="Developer" className={styles.badge} />
-                )}
-                {user.roles.includes("moderator") && (
-                  <FaUserShield data-tip="Moderator" className={styles.badge} />
-                )}
-                {user.roles.includes("verified") && (
-                  <FaUserCheck data-tip="Verified" className={styles.badge} />
-                )}
-                {user.contributions > 0 && (
-                  <FaUserEdit data-tip="Contributor" className={styles.badge} />
-                )}
-                {user.roles.includes("og") && (
-                  <img
-                    src="/images/logo.svg"
-                    data-tip="OG"
-                    className={styles.badge}
-                    height="30px"
-                    width="30px"
-                  />
-                )}
-                {user.createdAt > new Date(Date.now() - 604800000) && (
-                  <FaUserPlus data-tip="New user" className={styles.badge} />
-                )}
+      <div className={styles.usersPage}>
+        <div className={styles.container}>
+          <div className={styles.userSummary}>
+            <div className={styles.userInfo}>
+              <img
+                src={user.image}
+                className={styles.userImage}
+                width="200px"
+                height="200px"
+              />
+              <div className={styles.userName} align="center">
+                <h1 className={styles.userNameText}>{user.name}</h1>
+                <div className={styles.badges}>
+                  {user.roles.includes("developer") && (
+                    <FaCode data-tip="Developer" className={styles.badge} />
+                  )}
+                  {user.roles.includes("moderator") && (
+                    <FaUserShield
+                      data-tip="Moderator"
+                      className={styles.badge}
+                    />
+                  )}
+                  {user.roles.includes("verified") && (
+                    <FaUserCheck data-tip="Verified" className={styles.badge} />
+                  )}
+                  {user.contributions > 0 && (
+                    <FaUserEdit
+                      data-tip="Contributor"
+                      className={styles.badge}
+                    />
+                  )}
+                  {user.roles.includes("og") && (
+                    <img
+                      src="/images/logo.svg"
+                      data-tip="OG"
+                      className={styles.badge}
+                      height="30px"
+                      width="30px"
+                    />
+                  )}
+                  {user.createdAt > new Date(Date.now() - 604800000) && (
+                    <FaUserPlus data-tip="New user" className={styles.badge} />
+                  )}
+                </div>
               </div>
+              <p data-tip="Copy to clipboard" onClick={copyLinkToClipboard}>
+                <strong>{user.id}</strong>
+              </p>
             </div>
-            <p data-tip="Copy to clipboard" onClick={copyLinkToClipboard}>
-              <strong>{user.id}</strong>
-            </p>
+            <div className={styles.userStats}>
+              <h2 align="center">User Stats</h2>
+              <h3 className={styles.stat}>
+                Joined:{" "}
+                <span>
+                  {new Intl.DateTimeFormat("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "2-digit"
+                  })
+                    .format(user.createdAt)
+                    .replace(",", "")}
+                </span>
+              </h3>
+              <h3 className={styles.stat}>
+                Contributions: <span>{user.contributions}</span>
+              </h3>
+            </div>
           </div>
-          <div className={styles.userStats}>
-            <h2 align="center">User Stats</h2>
-            <h3 className={styles.stat}>
-              Joined:{" "}
-              <span>
-                {new Intl.DateTimeFormat("en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "2-digit"
-                })
-                  .format(user.createdAt)
-                  .replace(",", "")}
-              </span>
-            </h3>
-            <h3 className={styles.stat}>
-              Contributions: <span>{user.contributions}</span>
-            </h3>
+          <div
+            className={`${styles.partLists} ${
+              partLists.length == 0 ? styles.noLists : ""
+            }`}
+          >
+            <h2 className={styles.noLists}>
+              {user.name} doesn't have any public part lists
+            </h2>
           </div>
-        </div>
-        <div
-          className={`${styles.partLists} ${
-            partLists.length == 0 ? styles.noLists : ""
-          }`}
-        >
-          <h2 className={styles.noLists}>
-            {user.name} doesn't have any public part lists
-          </h2>
         </div>
       </div>
     </>
