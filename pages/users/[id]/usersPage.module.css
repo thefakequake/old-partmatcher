@@ -80,7 +80,7 @@
   margin-top: 0;
   margin-bottom: 0.3rem;
   width: 100%;
-  font-size: max(2vw, 1.5rem);
+  font-size: max(2.5vw, 1.5rem);
   color: white;
   font-weight: bold;
 }
@@ -146,6 +146,10 @@
     height: unset;
   }
 
+  .userNameText {
+    font-size: max(4vw, 2rem);
+  }
+
   .userStats {
     margin-top: 1rem;
   }
@@ -158,10 +162,16 @@
 
   .partLists {
     all: unset;
+    display: flex;
     background-color: var(--dark-2);
     border-radius: 1rem;
     height: 20rem;
     width: 90%;
     margin-top: 1rem;
+  }
+
+  .partLists.noLists {
+    align-items: center;
+    justify-content: center;
   }
 }
