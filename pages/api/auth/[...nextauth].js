@@ -1,6 +1,7 @@
 import NextAuth from "next-auth"
 import Providers from "next-auth/providers"
 import { accountAdapter } from "../../../utils/accountAdapter"
+import { connectToDatabase } from "../../../utils/mongodb"
 
 const options = async () => ({
   providers: [
@@ -29,15 +30,31 @@ const options = async () => ({
 
   callbacks: {
     async session(session, token) {
-      const newSession = {...session, id: token.id}
+      const newSession = { ...session, id: token.id }
       return newSession
     },
     signIn: async (profile, account, metadata) => {
-      if (account.provider != "github") 
-        return
-      const res = await fetch('https://api.github.com/user/emails', {
+      const image =
+        metadata.image_url ??
+        metadata.avatar_url ??
+        metadata.picture ??
+        metadata.profile_image_url_https.replace(
+          /_normal\.(jpg|png|gif)$/,
+          ".$1"
+        )
+
+      // checks if user's image has changed and updates it if it has
+      if (image != profile.image) {
+        const { db } = await connectToDatabase(0)
+        await db
+          .collection("Users")
+          .updateOne({ id: profile.id }, { $set: { image } })
+      }
+
+      if (account.provider != "github") return
+      const res = await fetch("https://api.github.com/user/emails", {
         headers: {
-          'Authorization': `token ${account.accessToken}`
+          Authorization: `token ${account.accessToken}`
         }
       })
       const emails = await res.json()
