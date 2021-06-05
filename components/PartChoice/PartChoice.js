@@ -14,7 +14,6 @@ const PartChoice = ({ partType }) => {
             src={`/images/parts/${partLinkName}.svg`}
             height="150px"
             width="150px"
-            priority={true}
           />
           <h2 align="center">{partType}</h2>
         </a>
