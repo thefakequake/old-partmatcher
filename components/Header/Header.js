@@ -9,7 +9,7 @@ const Header = ({
 }) => {
   return (
     <Head>
-      <title>{title ? `PartMatcher - ${title}` : "PartMatcher"}</title>
+      <title>{title ? `${title} - PartMatcher` : "PartMatcher"}</title>
 
       {/* Standard HTML Tags */}
       <meta name="theme-color" content="#14d18c" />
@@ -30,7 +30,8 @@ const Header = ({
       <meta property="og:type" content="website" />
 
       {/* Twitter */}
-      <meta name="twitter:title" content={title ? `PartMatcher - ${title}` : "PartMatcher"} />
+      <meta name="twitter:title" content="PartMatcher" />
+      <meta name="twitter:title" content={title ? title : "PartMatcher"} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image ? image : "/images/logo128.png"} />
     </Head>
