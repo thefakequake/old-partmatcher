@@ -21,8 +21,10 @@
 
 ## Current Features:
 - 12 different PC part types
-- Some API routes
+- API routes
 - Auth and accounts with 4 different social login methods
+- Badge and role system for users
+- Responsive design, adapts to mobile
 
 ## WIP/Upcoming:
 - Part lists
