@@ -30,7 +30,7 @@ const options = async () => ({
 
   callbacks: {
     async session(session, token) {
-      const newSession = { ...session, id: token.id }
+      const newSession = { ...session, id: token.id, user: {...session.user, roles} }
       return newSession
     },
     signIn: async (profile, account, metadata) => {
