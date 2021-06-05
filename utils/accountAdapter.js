@@ -4,10 +4,7 @@ import models from "./models"
 
 export const accountAdapter = async () => {
   const db = (await connectToDatabase(0)).db
-
-  const hashToken = (token) =>
-    createHash("sha256").update(`${token}${secret}`).digest("hex")
-
+  
   const stripUndefined = (obj) => {
     return Object.fromEntries(
       Object.entries(obj).filter(([, value]) => typeof value !== "undefined")
