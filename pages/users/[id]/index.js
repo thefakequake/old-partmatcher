@@ -63,7 +63,7 @@ const index = ({ user, partLists = [] }) => {
                   )}
                 </div>
               </div>
-              <p data-tip="Copy to clipboard" onClick={copyLinkToClipboard}>
+              <p data-tip="Copy" onClick={copyLinkToClipboard}>
                 <strong>{user.id}</strong>
               </p>
             </div>

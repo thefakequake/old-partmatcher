@@ -25,7 +25,7 @@ const part = ({ part }) => {
             </a>
           </Link>
           <p className={styles.seperator}>•</p>
-          <p onClick={copyLinkToClipboard} data-tip="Copy to clipboard" className={styles.partId}>
+          <p onClick={copyLinkToClipboard} data-tip="Copy" className={styles.partId}>
             {part.part_id}
           </p>
         </div>
@@ -63,6 +63,24 @@ const part = ({ part }) => {
           ))}
         </div>
       </div>
+      <button
+        onClick={() => {
+          fetch(`http://localhost:3000/api/parts/${part.part_id}/comments`, {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify({
+              author: "Tri-tip New",
+              createdAt: "today New ",
+              title: "Sup New ",
+              body: "Testing New"
+            })
+          }).then(res => res.statusCode)
+        }}
+      >
+        Test
+      </button>
     </>
   )
 }
