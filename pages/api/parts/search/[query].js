@@ -1,5 +1,5 @@
 import { connectToDatabase } from "../../../../utils/mongodb"
-import clamp from "../../../../utils/clamp"
+import clamp from "lodash/clamp"
 
 export default async (
   { query: { query = null, limit = 10, type = null } },
@@ -12,7 +12,7 @@ export default async (
 
   if (limit !== 10) {
     limit = parseInt(limit)
-    if (limit === NaN) {
+    if (isNaN(limit)) {
       res.status(400).json({ error: "Limit parameter couldn't be parsed!" })
       return
     }
