@@ -5,7 +5,6 @@
   </p>
 </a>
 
----
 ### https://partmatcher-beta.vercel.app/
 
 ### The open source PCPartPicker alternative, written with Next.js, React and MongoDB. The project is currently hosted on [Vercel](https://vercel.com).
