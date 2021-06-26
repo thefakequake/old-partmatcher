@@ -1,0 +1,33 @@
+.messageBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: clamp(1rem, 2.5vw, 3rem)
+}
+
+.message {
+  font-size: clamp(2rem, 5vw, 10rem);
+  font-weight: 600;
+  margin: 0;
+  color: var(--accent-1);
+}
+
+.messageText {
+  margin-top: 3rem;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.homeLink {
+  text-decoration: none;
+  color: var(--accent-1);
+}
