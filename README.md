@@ -28,6 +28,7 @@
 ## WIP/Upcoming:
 - Part lists
 - Part reviews
+- A large-scale part database
 
 ## Long term:
 - Part pricing
