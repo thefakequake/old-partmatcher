@@ -1,0 +1,128 @@
+.landingContainer {
+  --wave-height: 12rem;
+  width: 100%;
+}
+
+.waveContainer {
+  margin-bottom: calc(var(--wave-height) * 1.75);
+}
+
+.waveContainer > .filler {
+  user-select: none;
+  height: var(--wave-height);
+  width: 100%;
+  background-color: var(--accent-1);
+}
+
+.waveContainer > .wave {
+  height: calc(var(--wave-height) * 2.5);
+  width: max(175%, 75rem);
+  user-select: none;
+  position: absolute;
+  top: var(--wave-height);
+}
+
+.waveContainer > .titleText {
+  margin: 0;
+  font-size: min(5rem, 12vw);
+  position: absolute;
+  left: 50%;
+  top: var(--wave-height);
+  color: var(--dark-1);
+  transform: translate(-50%, -70%);
+}
+
+.waveContainer > .scrollText {
+  font-size: min(3rem, 5vw);
+  position: absolute;
+  left: 50%;
+  top: var(--wave-height);
+  color: var(--dark-1);
+  transform: translate(-50%, 110%);
+  border-right: 0.15em solid var(--dark-2);
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(26, end), blink-caret 1s step-end infinite;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.feature {
+  margin: 0 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 32rem;
+  width: 20rem;
+}
+
+.feature > h1 {
+  color: var(--accent-1);
+  font-size: 1.85rem;
+  margin-top: 1rem;
+}
+
+.feature > p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.feature > button {
+  font-size: 1rem;
+  border-radius: 1rem;
+  border: none;
+  width: 10rem;
+  height: 3rem;
+  background-color: var(--accent-1);
+  transition: background-color 0.25s;
+}
+
+.feature > button:hover {
+  background-color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .features {
+    flex-direction: column;
+  }
+
+  .feature {
+    margin-top: 2rem;
+  }
+
+  .feature > h1 {
+    font-size: 1.75rem;
+    margin-top: -1rem;
+  }
+
+  .waveContainer > .scrollText {
+    animation: unset;
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--dark-2);
+  }
+}
