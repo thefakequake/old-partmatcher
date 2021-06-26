@@ -1,0 +1,21 @@
+.spinner {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.spinnerLoading {
+  opacity: 1;
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
