@@ -5,6 +5,7 @@ import styles from "../styles/homePage.module.css"
 import ImageBox from "../components/ImageBox/ImageBox"
 import { FaMemory, FaUsers, FaCode } from "react-icons/fa"
 import { useRouter } from "next/router"
+import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner"
 
 const Feature = ({ image, name, description, click }) => {
   return (
@@ -30,9 +31,22 @@ const homePage = () => {
   const router = useRouter()
 
   return (
-    <div>
+    <>
       <Header description="Building a PC. Simplified." />
-      {!session && (
+      {session ? (
+        <>
+          <h1>Welcome to PartMatcher!</h1>
+          <h2>
+            Logged in as{" "}
+            <span style={{ color: "#14d18c" }}>{session.user.name}</span>.
+          </h2>
+        </>
+      ) : loading ? (
+        <div className={styles.loadingContainer}>
+          <LoadingSpinner width="150px" height="150px" loading={loading} />
+          <h1>Loading...</h1>
+        </div>
+      ) : (
         <div className={styles.landingContainer}>
           <div className={styles.waveContainer}>
             <div className={styles.filler} />
@@ -63,13 +77,7 @@ const homePage = () => {
           </div>
         </div>
       )}
-      {session && (
-        <>
-          <h1>Welcome to PartMatcher!</h1>
-          <h2>Logged in as <span style={{color: "#14d18c"}}>{session.user.name}</span>.</h2>
-        </>
-      )}
-    </div>
+    </>
   )
 }
 
