@@ -1,12 +1,16 @@
 .usersPage {
+  position: relative;
   width: 100%;
   height: 100%;
   margin-top: 2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .container {
   overflow-y: hidden;
-  height: 80%;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -46,7 +50,7 @@
   position: relative;
   display: flex;
   margin-left: 2rem;
-  flex-grow: 0.6;
+  flex-grow: 0.4;
   background-color: var(--dark-2);
   border-radius: 1rem;
   margin-right: 2rem;
@@ -65,6 +69,7 @@
   flex-direction: column;
   align-items: center;
   flex-grow: 0.1;
+  max-width: 26rem;
 }
 
 .userName {
@@ -80,7 +85,7 @@
   margin-top: 0;
   margin-bottom: 0.3rem;
   width: 100%;
-  font-size: max(2.5vw, 1.5rem);
+  font-size: max(2.2vw, 1.5rem);
   color: white;
   font-weight: bold;
 }
@@ -128,6 +133,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .usersPage {
+    margin-top: 1rem;
+  }
+
   .container {
     all: unset;
     display: flex;
@@ -135,7 +144,6 @@
     margin: 0;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 1rem;
     width: 100vw;
     margin-bottom: 1rem;
   }
