@@ -31,7 +31,7 @@ const homePage = () => {
 
   return (
     <div>
-      <Header title="Home" />
+      <Header description="Building a PC. Simplified." />
       {!session && (
         <div className={styles.landingContainer}>
           <div className={styles.waveContainer}>
