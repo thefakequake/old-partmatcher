@@ -13,8 +13,5 @@
   font-size: 20px;
   color: var(--accent-1);
   transition: color 0.2s;
-}
-
-.logo img {
-  padding-right: 0.55rem !important;
+  padding-left: 0.55rem;
 }
