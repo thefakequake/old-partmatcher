@@ -1,11 +1,11 @@
 import Header from "../components/Header/Header"
-import React from "react"
+import { useEffect } from "react"
 import { useSession } from "next-auth/client"
 import styles from "../styles/homePage.module.css"
 import ImageBox from "../components/ImageBox/ImageBox"
 import { FaMemory, FaUsers, FaCode } from "react-icons/fa"
 import { useRouter } from "next/router"
-import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner"
+import NProgress from "nprogress"
 
 const Feature = ({ image, name, description, click }) => {
   return (
@@ -30,6 +30,17 @@ const homePage = () => {
   const [session, loading] = useSession()
   const router = useRouter()
 
+  useEffect(
+    () => {
+      if (loading) {
+        NProgress.start()
+      } else {
+        NProgress.done()
+      }
+    },
+    [loading]
+  )
+
   return (
     <>
       <Header description="Building a PC. Simplified." />
@@ -41,11 +52,6 @@ const homePage = () => {
             <span style={{ color: "#14d18c" }}>{session.user.name}</span>.
           </h2>
         </>
-      ) : loading ? (
-        <div className={styles.loadingContainer}>
-          <LoadingSpinner width="150px" height="150px" loading={loading} />
-          <h1>Loading...</h1>
-        </div>
       ) : (
         <div className={styles.landingContainer}>
           <div className={styles.waveContainer}>
